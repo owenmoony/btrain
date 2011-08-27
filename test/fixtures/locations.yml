@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  address: MyString
+  state: MyString
+  suburb: MyString
+  postcode: MyString
+  details: MyString
+
+two:
+  address: MyString
+  state: MyString
+  suburb: MyString
+  postcode: MyString
+  details: MyString

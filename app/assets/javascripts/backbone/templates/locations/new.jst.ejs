@@ -2,13 +2,7 @@
 
 <form id="new-location" name="location">
 
-  <div class="errors">
-    <% if (model.get('errors')) { %>
-        <% _.each(model.get('errors'), function(value, name) { %>
-          <%= name %>: <%= value %>
-        <% }); %>
-    <% } %>
-  </div>
+  <%= JST["backbone/templates/locations/_errors"]({'model': model}) %>
 
   <div class="field">
     <label for="address"> address:</label>

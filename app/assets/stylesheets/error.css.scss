@@ -1,0 +1,11 @@
+// Place all the styles related to the Locations controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.errors{
+  li {
+    font-weight: bold
+  }
+}
+input.error {
+  background: pink
+}

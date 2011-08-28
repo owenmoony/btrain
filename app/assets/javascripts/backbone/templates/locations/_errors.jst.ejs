@@ -1,0 +1,9 @@
+<div class="errors">
+  <% if (model.get('errors')) { %>
+      <ul>
+      <% _.each(model.get('errors'), function(msg) { %>
+        <li><%= msg %>
+      <% }); %>
+      </ul>
+  <% } %>
+</div>

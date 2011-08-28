@@ -13,7 +13,6 @@ class Btrain.Views.Locations.NewView extends Backbone.View
     @options.model.bind("change:errors", () =>
       this.render()
       _.each(@options.model.get("errors"), (value, name) ->
-        console.log(name)
         $("input[name='" + name + "']").addClass("error"))
     )
     

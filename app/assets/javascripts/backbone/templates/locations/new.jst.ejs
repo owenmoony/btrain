@@ -1,29 +1,38 @@
 <h1>New location</h1>
 
 <form id="new-location" name="location">
+
+  <div class="errors">
+    <% if (model.get('errors')) { %>
+        <% _.each(model.get('errors'), function(value, name) { %>
+          <%= name %>: <%= value %>
+        <% }); %>
+    <% } %>
+  </div>
+
   <div class="field">
     <label for="address"> address:</label>
-    <input type="text" name="address" id="address" value=<%= address %> >
+    <input type="text" name="address" id="address" value=<%= model.get("address") %> >
   </div>
 
   <div class="field">
     <label for="state"> state:</label>
-    <input type="text" name="state" id="state" value=<%= state %> >
+    <input type="text" name="state" id="state" value=<%= model.get("state") %> >
   </div>
 
   <div class="field">
     <label for="suburb"> suburb:</label>
-    <input type="text" name="suburb" id="suburb" value=<%= suburb %> >
+    <input type="text" name="suburb" id="suburb" value=<%= model.get("suburb") %> >
   </div>
 
   <div class="field">
     <label for="postcode"> postcode:</label>
-    <input type="text" name="postcode" id="postcode" value=<%= postcode %> >
+    <input type="text" name="postcode" id="postcode" value=<%= model.get("postcode") %> >
   </div>
 
   <div class="field">
     <label for="details"> details:</label>
-    <input type="text" name="details" id="details" value=<%= details %> >
+    <input type="text" name="details" id="details" value=<%= model.get("details") %> >
   </div>
 
   <div class="actions">

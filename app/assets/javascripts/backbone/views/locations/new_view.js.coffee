@@ -24,13 +24,13 @@ class Btrain.Views.Locations.NewView extends Backbone.View
       success: (model) =>
         @options.model = model
         window.location.hash = "/#{@options.model.id}"
-        
+
       error: (model, jqXHR) =>
         @options.model.set({errors: $.parseJSON(jqXHR.responseText)})
     )
     
   render: ->
-    $(this.el).html(this.template(@options.model.toJSON() ))
+    $(this.el).html(this.template({model: @options.model}))
     
     this.$("form").backboneLink(@options.model)
     
